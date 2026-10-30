@@ -12,7 +12,7 @@ Version: 9.018.00
 Release: 1%{?dist}
 License: GPL
 
-# Origin: https://www.realtek.com/Download/List?cate_id=584
+# Origin: https://www.realtek.com/Download/List?cate_id=584# (2.5G Ethernet LINUX driver r8125 for kernel up to 7.1)
 Source0: %{driver_name}-%{version}.tar.bz2
 
 Patch0: 0001-config_change.patch
