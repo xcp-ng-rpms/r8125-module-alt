@@ -3,7 +3,7 @@
 %define driver_name r8125
 
 %if %undefined module_dir
-%define module_dir extra
+%define module_dir override
 %endif
 
 Summary: %{vendor_name} %{driver_name} device drivers
