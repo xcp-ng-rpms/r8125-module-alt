@@ -9,7 +9,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module-alt
 Version: 9.018.00
-Release: 1%{?dist}
+Release: 1.0.kernelpreview.1%{?dist}
 License: GPL-2.0-only
 
 # Origin: https://www.realtek.com/Download/List?cate_id=584# (2.5G Ethernet LINUX driver r8125 for kernel up to 7.1)
@@ -20,7 +20,7 @@ Patch1: 0002-use_new_api.patch
 Patch2: 0003-txcsum_sg_tso_off.patch
 
 BuildRequires: gcc
-BuildRequires: kernel-devel
+BuildRequires: kernel-devel >= 4.19.325-cip137.8.0.46.16
 Provides: vendor-driver
 Requires: kernel-uname-r = %{kernel_version}
 Requires(post): /usr/sbin/depmod
@@ -57,6 +57,9 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Mon Nov 16 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 9.018.00-1.0.kernelpreview.1
+- Rebuild for kernel v4.19.325-cip137
+
 * Mon Oct 19 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 9.018.00-1
 - Adding Realtek driver r8125 9.018.00 as r8125-module-alt
 - Spec file and configuration based of the r8125-module package
