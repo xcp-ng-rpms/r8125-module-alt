@@ -9,7 +9,7 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{driver_name}-module-alt
 Version: 9.018.00
-Release: 1.0.kernelpreview.1%{?dist}
+Release: 1.0.kernelpreview.1.0.testv0.1%{?dist}
 License: GPL-2.0-only
 
 # Origin: https://www.realtek.com/Download/List?cate_id=584# (2.5G Ethernet LINUX driver r8125 for kernel up to 7.1)
